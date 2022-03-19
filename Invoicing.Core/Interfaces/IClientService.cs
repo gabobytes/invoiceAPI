@@ -6,10 +6,10 @@ namespace Invoicing.Core.Interfaces
 {
     public interface IClientService
     {
-        Task<bool> DeleteAuthor(int id);
-        Task<Client> GetClient(int id);
         IEnumerable<Client> GetClients();
-        Task InsertAuthor(Client client);
-        Task<bool> UpdateAuthor(Client client);
+        Task<Client> GetClient(int id);        
+        Task InsertClient(Client client);
+        Task<bool> UpdateClient(Client client);
+        Task<bool> DeleteClient(int id);
     }
 }

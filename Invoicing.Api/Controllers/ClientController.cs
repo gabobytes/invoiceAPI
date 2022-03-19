@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Invoicing.Api.Responses;
+using Invoicing.Core.Data;
 using Invoicing.Core.DTOs;
 using Invoicing.Core.Interfaces;
 using Microsoft.AspNetCore.Http;
@@ -34,5 +35,50 @@ namespace Invoicing.Api.Controllers
 
             return Ok(response);
         }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetClient (int id)
+        {
+            var client = await _clientService.GetClient(id);
+            var clientDto = _mapper.Map<ClientDto>(client);
+            var response = new ApiResponse<ClientDto>(clientDto);
+
+            return Ok(response);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Post(ClientDto clientDto)
+        {
+            var client = _mapper.Map<Client>(clientDto);
+
+            await _clientService.InsertClient(client);
+
+            clientDto = _mapper.Map<ClientDto>(client);
+            var response = new ApiResponse<ClientDto>(clientDto);
+
+            return Ok(response);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Put(int id, ClientDto clientDto)
+        {
+            var client = _mapper.Map<Client>(clientDto);
+            client.Id = id;
+
+            var result = await _clientService.UpdateClient(client);
+            var response = new ApiResponse<bool>(result);
+
+            return Ok(response);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var result = await _clientService.DeleteClient(id);
+            var response = new ApiResponse<bool>(result);
+
+            return Ok(response);
+        }
+
     }
 }
