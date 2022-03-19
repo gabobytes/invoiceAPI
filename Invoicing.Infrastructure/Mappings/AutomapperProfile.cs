@@ -13,6 +13,8 @@ namespace Invoicing.Infrastructure.Mappings
         {
             CreateMap<Client, ClientDto>();
             CreateMap<ClientDto, Client>();
+            CreateMap<Product, ProductDto>();
+            CreateMap<ProductDto, Product>();
 
         }
     }

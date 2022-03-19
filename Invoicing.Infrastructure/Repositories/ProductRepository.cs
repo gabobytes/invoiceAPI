@@ -7,8 +7,8 @@ using System.Text;
 
 namespace Invoicing.Infrastructure.Repositories
 {
-    public class ClientRepository: BaseRepository<Client>, IClientRepository
+    public class ProductRepository : BaseRepository<Product>, IProductRepository
     {
-        public ClientRepository(invoicingContext context ) : base(context) { }     
+        public ProductRepository(invoicingContext context) : base(context) { }
     }
 }

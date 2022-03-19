@@ -9,6 +9,7 @@ namespace Invoicing.Core.Interfaces
     public interface IUnitOfWork: IDisposable
     {
         IRepository<Client> ClientRepository { get; }
+        IRepository<Product> ProductRepository { get; }
         void SaveChanges();
         Task SaveChangesAsync();
     }
