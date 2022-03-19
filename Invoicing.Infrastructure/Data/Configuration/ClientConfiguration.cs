@@ -8,11 +8,11 @@ namespace Invoicing.Infrastructure.Data.Configuration
     {
         public void Configure(EntityTypeBuilder<Client> builder)
         {
-            builder.HasKey(e => e.Idclient);
+            builder.HasKey(e => e.Id);
 
             builder.ToTable("client");
 
-            builder.Property(e => e.Idclient).HasColumnName("idclient");
+            builder.Property(e => e.Id).HasColumnName("idclient");
 
             builder.Property(e => e.Document)
                 .HasColumnName("document")
@@ -25,9 +25,9 @@ namespace Invoicing.Infrastructure.Data.Configuration
                 .HasMaxLength(80)
                 .IsUnicode(false);
 
-            builder.Property(e => e.Name)
+            builder.Property(e => e.Firstname)
                 .IsRequired()
-                .HasColumnName("name")
+                .HasColumnName("firstname")
                 .HasMaxLength(80)
                 .IsUnicode(false);
 

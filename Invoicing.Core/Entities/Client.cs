@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Invoicing.Core.Entities;
+using System;
 using System.Collections.Generic;
 
 // Code scaffolded by EF Core assumes nullable reference types (NRTs) are not used or disabled.
@@ -7,16 +8,16 @@ using System.Collections.Generic;
 
 namespace Invoicing.Core.Data
 {
-    public partial class Client
+    public partial class Client: BaseEntity
     {
         public Client()
         {
             Invoice = new HashSet<Invoice>();
         }
 
-        public int Idclient { get; set; }
+        
         public string Document { get; set; }
-        public string Name { get; set; }
+        public string Firstname { get; set; }
         public string Lastname { get; set; }
         public string Phone { get; set; }
 

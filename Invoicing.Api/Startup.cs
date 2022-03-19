@@ -1,4 +1,7 @@
+using Invoicing.Core.Interfaces;
+using Invoicing.Core.Services;
 using Invoicing.Infrastructure.Data;
+using Invoicing.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -26,11 +29,26 @@ namespace Invoicing.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+            services.AddControllers().AddNewtonsoftJson(options =>
+            {
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+            });
+
             services.AddControllers();
+
+            services.AddTransient<IClientService, ClientService>();
+            services.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
 
             services.AddDbContext<invoicingContext>(options=>
             options.UseSqlServer(Configuration.GetConnectionString("invoicingConnection"))
                 );
+
+
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

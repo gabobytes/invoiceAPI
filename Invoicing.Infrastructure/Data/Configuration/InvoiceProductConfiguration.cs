@@ -11,11 +11,11 @@ namespace Invoicing.Infrastructure.Data.Configuration
     {
         public void Configure(EntityTypeBuilder<InvoiceProduct> builder)
         {
-            builder.HasKey(e => e.Idinvoiceproduct);
+            builder.HasKey(e => e.Id);
 
             builder.ToTable("invoiceproduct");
 
-            builder.Property(e => e.Idinvoiceproduct).HasColumnName("idinvoiceproduct");
+            builder.Property(e => e.Id).HasColumnName("idinvoiceproduct");
 
             builder.Property(e => e.Idinvoice).HasColumnName("idinvoice");
 

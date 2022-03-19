@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Invoicing.Core.Entities;
+using System;
 using System.Collections.Generic;
 
 // Code scaffolded by EF Core assumes nullable reference types (NRTs) are not used or disabled.
@@ -7,9 +8,9 @@ using System.Collections.Generic;
 
 namespace Invoicing.Core.Data
 {
-    public partial class InvoiceProduct
+    public partial class InvoiceProduct: BaseEntity
     {
-        public int Idinvoiceproduct { get; set; }
+        
         public int Idinvoice { get; set; }
         public int Idproduct { get; set; }
         public decimal Value { get; set; }

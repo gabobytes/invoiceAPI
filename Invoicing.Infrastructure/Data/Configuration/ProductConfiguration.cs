@@ -11,16 +11,16 @@ namespace Invoicing.Infrastructure.Data.Configuration
     {
         public void Configure(EntityTypeBuilder<Product> builder)
         {
-            builder.HasKey(e => e.Idproduct);
+            builder.HasKey(e => e.Id);
 
             builder.ToTable("product");
 
-            builder.Property(e => e.Idproduct).HasColumnName("idproduct");
+            builder.Property(e => e.Id).HasColumnName("idproduct");
 
             builder.Property(e => e.Productname)
                 .IsRequired()
                 .HasColumnName("productname")
-                .HasMaxLength(10)
+                .HasMaxLength(255)
                 .IsFixedLength();
 
             builder.Property(e => e.Value)
