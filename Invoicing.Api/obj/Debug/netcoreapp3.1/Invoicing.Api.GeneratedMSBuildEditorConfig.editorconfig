@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = Invoicing.Api
+build_property.ProjectDir = D:\Dropbox\NET Core\Apps\Invoicing\Invoicing.Api\
