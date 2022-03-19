@@ -11,13 +11,13 @@ namespace Invoicing.Core.Data
     {
         public Product()
         {
-            Invoiceproduct = new HashSet<Invoiceproduct>();
+            Invoiceproduct = new HashSet<InvoiceProduct>();
         }
 
         public int Idproduct { get; set; }
         public string Productname { get; set; }
         public decimal Value { get; set; }
 
-        public virtual ICollection<Invoiceproduct> Invoiceproduct { get; set; }
+        public virtual ICollection<InvoiceProduct> Invoiceproduct { get; set; }
     }
 }

@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Invoicing.Core.Data
 {
-    public partial class Invoiceproduct
+    public partial class InvoiceProduct
     {
         public int Idinvoiceproduct { get; set; }
         public int Idinvoice { get; set; }

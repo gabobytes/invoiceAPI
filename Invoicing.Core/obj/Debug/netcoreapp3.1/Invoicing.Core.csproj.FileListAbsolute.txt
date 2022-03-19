@@ -7,3 +7,4 @@ D:\Dropbox\NET Core\Apps\Invoicing\Invoicing.Core\obj\Debug\netcoreapp3.1\Invoic
 D:\Dropbox\NET Core\Apps\Invoicing\Invoicing.Core\obj\Debug\netcoreapp3.1\Invoicing.Core.csproj.CoreCompileInputs.cache
 D:\Dropbox\NET Core\Apps\Invoicing\Invoicing.Core\obj\Debug\netcoreapp3.1\Invoicing.Core.dll
 D:\Dropbox\NET Core\Apps\Invoicing\Invoicing.Core\obj\Debug\netcoreapp3.1\Invoicing.Core.pdb
+D:\Dropbox\NET Core\Apps\Invoicing\Invoicing.Core\obj\Debug\netcoreapp3.1\Invoicing.Core.csproj.AssemblyReference.cache

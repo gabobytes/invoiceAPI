@@ -11,7 +11,7 @@ namespace Invoicing.Core.Data
     {
         public Invoice()
         {
-            Invoiceproduct = new HashSet<Invoiceproduct>();
+            Invoiceproduct = new HashSet<InvoiceProduct>();
         }
 
         public int Idinvoice { get; set; }
@@ -19,6 +19,6 @@ namespace Invoicing.Core.Data
         public DateTime Date { get; set; }
 
         public virtual Client IdclientNavigation { get; set; }
-        public virtual ICollection<Invoiceproduct> Invoiceproduct { get; set; }
+        public virtual ICollection<InvoiceProduct> Invoiceproduct { get; set; }
     }
 }
