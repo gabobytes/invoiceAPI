@@ -13,6 +13,8 @@ namespace Invoicing.Infrastructure.Repositories
         private readonly invoicingContext _context;
         private readonly IRepository<Client> _clientRepository;
         private readonly IRepository<Product> _productRepository;
+        private readonly IRepository<Invoice> _invoiceRepository;
+        private readonly IRepository<InvoiceProduct> _invoiceRepositoryProduct;
 
         public UnitOfWork(invoicingContext context)
         {
@@ -21,6 +23,8 @@ namespace Invoicing.Infrastructure.Repositories
 
         public IRepository<Client> ClientRepository => _clientRepository ?? new BaseRepository<Client>(_context);
         public IRepository<Product> ProductRepository => _productRepository ?? new BaseRepository<Product>(_context);
+        public IRepository<Invoice> InvoiceRepository => _invoiceRepository ?? new BaseRepository<Invoice>(_context);
+        public IRepository<InvoiceProduct> InvoiceProductRepository => _invoiceRepositoryProduct ?? new BaseRepository<InvoiceProduct>(_context);
 
         public void Dispose()
         {

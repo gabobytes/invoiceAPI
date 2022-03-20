@@ -10,6 +10,8 @@ namespace Invoicing.Core.Interfaces
     {
         IRepository<Client> ClientRepository { get; }
         IRepository<Product> ProductRepository { get; }
+        IRepository<Invoice> InvoiceRepository { get; }
+        IRepository<InvoiceProduct> InvoiceProductRepository { get; }
         void SaveChanges();
         Task SaveChangesAsync();
     }

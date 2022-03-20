@@ -25,6 +25,8 @@ namespace Invoicing.Infrastructure.Data.Configuration
                 .HasColumnName("value")
                 .HasColumnType("decimal(18, 0)");
 
+            builder.Property(e => e.Quantity).HasColumnName("Quantity");
+
             builder.HasOne(d => d.IdinvoiceNavigation)
                 .WithMany(p => p.Invoiceproduct)
                 .HasForeignKey(d => d.Idinvoice)

@@ -14,6 +14,7 @@ namespace Invoicing.Core.Data
         public int Idinvoice { get; set; }
         public int Idproduct { get; set; }
         public decimal Value { get; set; }
+        public int Quantity { get; set; }
 
         public virtual Invoice IdinvoiceNavigation { get; set; }
         public virtual Product IdproductNavigation { get; set; }

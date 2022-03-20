@@ -29,7 +29,6 @@ namespace Invoicing.Core.Services
 
         public async Task InsertProduct(Product product)
         {   
-
              await _unitOfWork.ProductRepository.Add(product);
              await _unitOfWork.SaveChangesAsync();
         }

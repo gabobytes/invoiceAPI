@@ -40,6 +40,8 @@ namespace Invoicing.Api
 
             services.AddTransient<IClientService, ClientService>();
             services.AddTransient<IProductService, ProductService>();
+            services.AddTransient<IInvoiceService, InvoiceService>();
+            services.AddTransient<IInvoiceProductService, InvoiceProductService>();
             services.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
             services.AddTransient<IUnitOfWork, UnitOfWork>();
 
