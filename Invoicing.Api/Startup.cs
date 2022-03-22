@@ -29,7 +29,17 @@ namespace Invoicing.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            //Enable CORS
+            services.AddCors(c =>
+            {
+                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().SetIsOriginAllowed(origin => true));
+
+            });
+
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+
 
             services.AddControllers().AddNewtonsoftJson(options =>
             {
@@ -63,6 +73,14 @@ namespace Invoicing.Api
             }
 
             app.UseRouting();
+
+            // global cors policy
+            app.UseCors(x => x
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .SetIsOriginAllowed(origin => true) // allow any origin
+                .AllowCredentials()); // allow credentials
+
 
             app.UseAuthorization();
 

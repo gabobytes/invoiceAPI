@@ -1,6 +1,7 @@
 D:\Dropbox\NET Core\Apps\Invoicing\Invoicing.Core\bin\Debug\netcoreapp3.1\Invoicing.Core.deps.json
 D:\Dropbox\NET Core\Apps\Invoicing\Invoicing.Core\bin\Debug\netcoreapp3.1\Invoicing.Core.dll
 D:\Dropbox\NET Core\Apps\Invoicing\Invoicing.Core\bin\Debug\netcoreapp3.1\Invoicing.Core.pdb
+D:\Dropbox\NET Core\Apps\Invoicing\Invoicing.Core\obj\Debug\netcoreapp3.1\Invoicing.Core.csproj.AssemblyReference.cache
 D:\Dropbox\NET Core\Apps\Invoicing\Invoicing.Core\obj\Debug\netcoreapp3.1\Invoicing.Core.GeneratedMSBuildEditorConfig.editorconfig
 D:\Dropbox\NET Core\Apps\Invoicing\Invoicing.Core\obj\Debug\netcoreapp3.1\Invoicing.Core.AssemblyInfoInputs.cache
 D:\Dropbox\NET Core\Apps\Invoicing\Invoicing.Core\obj\Debug\netcoreapp3.1\Invoicing.Core.AssemblyInfo.cs
