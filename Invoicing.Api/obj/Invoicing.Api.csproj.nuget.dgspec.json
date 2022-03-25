@@ -1,0 +1,212 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Dropbox\\NET Core\\Apps\\Invoicing\\Invoicing.Api\\Invoicing.Api.csproj": {}
+  },
+  "projects": {
+    "D:\\Dropbox\\NET Core\\Apps\\Invoicing\\Invoicing.Api\\Invoicing.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Dropbox\\NET Core\\Apps\\Invoicing\\Invoicing.Api\\Invoicing.Api.csproj",
+        "projectName": "Invoicing.Api",
+        "projectPath": "D:\\Dropbox\\NET Core\\Apps\\Invoicing\\Invoicing.Api\\Invoicing.Api.csproj",
+        "packagesPath": "C:\\Users\\Gabo\\.nuget\\packages\\",
+        "outputPath": "D:\\Dropbox\\NET Core\\Apps\\Invoicing\\Invoicing.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Gabo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\Dropbox\\NET Core\\Apps\\Invoicing\\Invoicing.Core\\Invoicing.Core.csproj": {
+                "projectPath": "D:\\Dropbox\\NET Core\\Apps\\Invoicing\\Invoicing.Core\\Invoicing.Core.csproj"
+              },
+              "D:\\Dropbox\\NET Core\\Apps\\Invoicing\\Invoicing.Infrastructure\\Invoicing.Infrastructure.csproj": {
+                "projectPath": "D:\\Dropbox\\NET Core\\Apps\\Invoicing\\Invoicing.Infrastructure\\Invoicing.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[3.1.21, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.23, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Dropbox\\NET Core\\Apps\\Invoicing\\Invoicing.Core\\Invoicing.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Dropbox\\NET Core\\Apps\\Invoicing\\Invoicing.Core\\Invoicing.Core.csproj",
+        "projectName": "Invoicing.Core",
+        "projectPath": "D:\\Dropbox\\NET Core\\Apps\\Invoicing\\Invoicing.Core\\Invoicing.Core.csproj",
+        "packagesPath": "C:\\Users\\Gabo\\.nuget\\packages\\",
+        "outputPath": "D:\\Dropbox\\NET Core\\Apps\\Invoicing\\Invoicing.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Gabo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Dropbox\\NET Core\\Apps\\Invoicing\\Invoicing.Infrastructure\\Invoicing.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Dropbox\\NET Core\\Apps\\Invoicing\\Invoicing.Infrastructure\\Invoicing.Infrastructure.csproj",
+        "projectName": "Invoicing.Infrastructure",
+        "projectPath": "D:\\Dropbox\\NET Core\\Apps\\Invoicing\\Invoicing.Infrastructure\\Invoicing.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Gabo\\.nuget\\packages\\",
+        "outputPath": "D:\\Dropbox\\NET Core\\Apps\\Invoicing\\Invoicing.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Gabo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\Dropbox\\NET Core\\Apps\\Invoicing\\Invoicing.Core\\Invoicing.Core.csproj": {
+                "projectPath": "D:\\Dropbox\\NET Core\\Apps\\Invoicing\\Invoicing.Core\\Invoicing.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.23, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.23, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

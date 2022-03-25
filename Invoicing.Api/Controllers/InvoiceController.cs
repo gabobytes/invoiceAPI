@@ -18,10 +18,14 @@ namespace Invoicing.Api.Controllers
     {
         private readonly IInvoiceService _invoiceService;
         private readonly IMapper _mapper;
+        private readonly IInvoiceProductService _invoiceProductService;
 
-        public InvoiceController(IInvoiceService invoiceService, IMapper mapper)
+        public InvoiceController(IInvoiceService invoiceService, 
+            IMapper mapper,
+            IInvoiceProductService invoiceProductService)
         {
             _invoiceService = invoiceService;
+            _invoiceProductService = invoiceProductService;
             _mapper = mapper;
         }
 
@@ -48,6 +52,43 @@ namespace Invoicing.Api.Controllers
             int idFactua = response.Data.Id;
 
             return Ok(response.Data.Id);
+        }
+
+        [HttpPost("[action]")]
+        public async Task<IActionResult> PostInvoice(InvoiceRegisterDTO invoiceRegisterDto)
+        {
+            var invoiceDto = new Invoice() {
+                Idclient = invoiceRegisterDto.Idclient,
+                Date = DateTime.Now
+            };
+            var invoice = _mapper.Map<Invoice>(invoiceDto);
+
+            var idFactura = await _invoiceService.InsertInvoice(invoice);
+
+            try
+            {
+                foreach (var item in invoiceRegisterDto.ProductsInvoice)
+                {
+                    var detailInvoice = new InvoiceProduct()
+                    {
+                        Idinvoice = idFactura,
+                        Idproduct = item.Id,
+                        Quantity = item.Quantity,
+                        Value = item.Value
+                        
+                    };
+                    await _invoiceProductService.InsertInvoiceProduct(detailInvoice);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw;
+            }
+            
+
+            return Ok();
         }
     }
 }
