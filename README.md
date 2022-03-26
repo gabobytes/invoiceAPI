@@ -64,8 +64,8 @@ Trying http://localhost:1451/Api/Product we get:
 Three projects was created and based on clean architecture:  
 
 
-Invoicing.Api  
+-Invoicing.Api  
 
-Invoicing.Core  
+-Invoicing.Core  
 
-Invoicing.Infrastructure  
+-Invoicing.Infrastructure  
