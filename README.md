@@ -61,7 +61,7 @@ Trying http://localhost:1451/Api/Product we get:
 
 ## Clean Architecture
 
-Three projects represents clean architecture:  
+Three projects was created and based on clean architecture:  
 
 
 Invoicing.Api  
